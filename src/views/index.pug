@@ -1,12 +1,25 @@
-extends layout
+-
+  var pages = [
+    {
+      label: 'Главная',
+      name: 'main'
+    }
+  ]
 
-block content
-  h1 Hi!
-  main
-    div
-      h2 SVG image
-      img(src="./images/github.svg", width="128")
-    hr
-    div
-      h2 PNG image
-      img(src="./images/github.png", width="128")
+doctype html
+html(lang="ru")
+  head
+    title Югорский лесопромышленный холдинг
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    link(rel='stylesheet', href='css/main.css')
+
+  body
+    main.index-menu
+      h3.h3 Список страниц в проекте
+      ol
+        each page in pages
+          li
+            a(href= page.name + '.html')= page.label
