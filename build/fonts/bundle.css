@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('hinted-PTSans-BoldItalic.eot');
+    src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'),
+        url('hinted-PTSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('hinted-PTSans-BoldItalic.woff2') format('woff2'),
+        url('hinted-PTSans-BoldItalic.woff') format('woff'),
+        url('hinted-PTSans-BoldItalic.ttf') format('truetype'),
+        url('hinted-PTSans-BoldItalic.svg#PTSans-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('hinted-PTSans-Regular.eot');
+    src: local('PT Sans'), local('PTSans-Regular'),
+        url('hinted-PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('hinted-PTSans-Regular.woff2') format('woff2'),
+        url('hinted-PTSans-Regular.woff') format('woff'),
+        url('hinted-PTSans-Regular.ttf') format('truetype'),
+        url('hinted-PTSans-Regular.svg#PTSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    src: url('hinted-Cuprum-Bold.eot');
+    src: local('Cuprum Bold'), local('Cuprum-Bold'),
+        url('hinted-Cuprum-Bold.eot?#iefix') format('embedded-opentype'),
+        url('hinted-Cuprum-Bold.woff2') format('woff2'),
+        url('hinted-Cuprum-Bold.woff') format('woff'),
+        url('hinted-Cuprum-Bold.ttf') format('truetype'),
+        url('hinted-Cuprum-Bold.svg#Cuprum-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('hinted-PTSans-Italic.eot');
+    src: local('PT Sans Italic'), local('PTSans-Italic'),
+        url('hinted-PTSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('hinted-PTSans-Italic.woff2') format('woff2'),
+        url('hinted-PTSans-Italic.woff') format('woff'),
+        url('hinted-PTSans-Italic.ttf') format('truetype'),
+        url('hinted-PTSans-Italic.svg#PTSans-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    src: url('hinted-Cuprum-Regular.eot');
+    src: local('Cuprum Regular'), local('Cuprum-Regular'),
+        url('hinted-Cuprum-Regular.eot?#iefix') format('embedded-opentype'),
+        url('hinted-Cuprum-Regular.woff2') format('woff2'),
+        url('hinted-Cuprum-Regular.woff') format('woff'),
+        url('hinted-Cuprum-Regular.ttf') format('truetype'),
+        url('hinted-Cuprum-Regular.svg#Cuprum-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    src: url('hinted-Cuprum-BoldItalic.eot');
+    src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
+        url('hinted-Cuprum-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('hinted-Cuprum-BoldItalic.woff2') format('woff2'),
+        url('hinted-Cuprum-BoldItalic.woff') format('woff'),
+        url('hinted-Cuprum-BoldItalic.ttf') format('truetype'),
+        url('hinted-Cuprum-BoldItalic.svg#Cuprum-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('hinted-PTSans-Bold.eot');
+    src: local('PT Sans Bold'), local('PTSans-Bold'),
+        url('hinted-PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('hinted-PTSans-Bold.woff2') format('woff2'),
+        url('hinted-PTSans-Bold.woff') format('woff'),
+        url('hinted-PTSans-Bold.ttf') format('truetype'),
+        url('hinted-PTSans-Bold.svg#PTSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    src: url('hinted-Cuprum-Italic.eot');
+    src: local('Cuprum Italic'), local('Cuprum-Italic'),
+        url('hinted-Cuprum-Italic.eot?#iefix') format('embedded-opentype'),
+        url('hinted-Cuprum-Italic.woff2') format('woff2'),
+        url('hinted-Cuprum-Italic.woff') format('woff'),
+        url('hinted-Cuprum-Italic.ttf') format('truetype'),
+        url('hinted-Cuprum-Italic.svg#Cuprum-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
