@@ -37,17 +37,26 @@
         strokeOpacity: 0,
         strokeWidth: 0,
         fillColor: '00994a',
-        fillOpacity: 1,
-        /*shadow: true,
-        shadowX: 0,
-        shadowY: 10,
-        alwaysOn: true,
-        shadowOpacity: 0.5,
-        shadowRadius: 20*/
+        fillOpacity: 1
       })
-      /*$map.find('area').hover(() => {
-        console.log('ok')
-      })*/
+
+      const $mapping = $('.mapping')
+      const hoverClass = 'hover'
+      const getDistrict = ((position) => {
+        return $mapping.find('.mapping-district[data-position=' + position + ']')
+      })
+      $map
+        .on('mouseover.maphilight', (e) => { getDistrict(e.target.dataset.position).addClass(hoverClass) })
+        .on('mouseout.maphilight', (e) => { getDistrict(e.target.dataset.position).removeClass(hoverClass) })
+    }
+
+    // мобильное меню
+    {
+      $('.js-mobile').on('click', (e) => {
+        const $this = $(e.currentTarget)
+        $this.toggleClass('active')
+        $(e.currentTarget.dataset.target).slideToggle()
+      })
     }
 
   })

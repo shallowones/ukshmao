@@ -6,6 +6,11 @@ block content
 
     header.header
       .header-top
+        button(type="button", data-target=".header-bottom").mobile__button.js-mobile
+          span
+          span
+          span
+          span
         a(href="#").header-left
           .header-logo
           .header-title
@@ -79,9 +84,8 @@ block content
           a(href="#", style="background-image: url('images/teaser-4.png')").swiper-slide
 
       .map
-        .map-left
+        .map-left(style="background-image: url('images/location.png')")
           // подразумевается вставка блока с кодом карты вместо img
-          img(src="images/location.png")
         .map-right
           h3.h3 КУ Ханты-Мансийского автономного округа-Югры «Управление Капитального Строительства»
           p Ханты-Мансийский Автономный округ - Югра АО, Ханты-Мансийск г, ул. Мира, д. 18
@@ -93,7 +97,6 @@ block content
             .phones__item E-mail:
               span
                 a(href="#").link priem@ukshmao.ru
-
 
     footer.footer.
       КУ Ханты-Мансийского автономного округа-Югры  «Управление Капитального Строительства»<br>
