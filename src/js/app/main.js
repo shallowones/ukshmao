@@ -25,6 +25,11 @@
         loop: true,
         autoplay: {
           delay: 3000
+        },
+        breakpoints: {
+          480: {
+            spaceBetween: 10
+          }
         }
       })
     }

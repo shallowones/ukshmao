@@ -24,10 +24,12 @@ html(lang="ru")
       link(rel='stylesheet', href= path)
 
   body
-
     include mixins/map
 
-    block content
+    .page.wrapper
+      include includes/header
+      block content
+      include includes/footer
 
-    each path in js
-      script(src= path)
+      each path in js
+        script(src= path)
