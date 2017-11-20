@@ -2,72 +2,53 @@ extends layout
 
 block content
 
-    main.main
-
-      .slider
-        .slider-left
-          .history-title за 2016 год введено
-          .history
-            .history__item
-              .history__item-number 2
-              .history__item-desc объекта<br>здравоохранения
-            .history__item
-              .history__item-number 8
-              .history__item-desc объектов<br>образования
-            .history__item
-              .history__item-number 2
-              .history__item-desc пожарных<br>депо
-            .history__item
-              .history__item-number 1
-              .history__item-desc социальный<br>объект
-            .history__item
-              .history__item-number *
-              .history__item-desc и другие<br>объекты
-          a(href="#").button Подробнее
-        .slider-right.swiper-container.js-top-slider
-          .swiper-wrapper
-            .swiper-slide(style="background-image: url('images/slider-1.jpg')")
-            .swiper-slide(style="background-image: url('images/slider-2.jpg')")
-            .swiper-slide(style="background-image: url('images/slider-3.jpg')")
-          .swiper-pagination
-
-      .main-map
-        .main-map-left
-          h1.h1 Деятельность
-          .main-info
-            .main-info__title Ханты-Мансийский Автономный округ - Югра
-            .main-info-block
-              b Общее количество объектов:
-              p 41
-            .main-info-block
-              b План финансирования по программам на 2017 год:
-              p АИП: 529 239,20 тыс. р.
-              p Сотрудничество: 1 317 151,54 тыс. р.
-            .main-info-block
-              b Общий план финансирования:
-              p 1 846 390,74 тыс. р.
-            a(href="#").button Перейти к списку объектов
-        .main-map-right
-          +map
-
-      .slider-mini.swiper-container.js-bottom-slider
+    .slider
+      .slider-left
+        .history-title за 2016 год введено
+        .history
+          .history__item
+            .history__item-number 2
+            .history__item-desc объекта<br>здравоохранения
+          .history__item
+            .history__item-number 8
+            .history__item-desc объектов<br>образования
+          .history__item
+            .history__item-number 2
+            .history__item-desc пожарных<br>депо
+          .history__item
+            .history__item-number 1
+            .history__item-desc социальный<br>объект
+          .history__item
+            .history__item-number *
+            .history__item-desc и другие<br>объекты
+        a(href="#").button Подробнее
+      .slider-right.swiper-container.js-top-slider
         .swiper-wrapper
-          a(href="#", style="background-image: url('images/teaser-1.png')").swiper-slide
-          a(href="#", style="background-image: url('images/teaser-2.png')").swiper-slide
-          a(href="#", style="background-image: url('images/teaser-3.png')").swiper-slide
-          a(href="#", style="background-image: url('images/teaser-4.png')").swiper-slide
+          .swiper-slide(style="background-image: url('images/slider-1.jpg')")
+          .swiper-slide(style="background-image: url('images/slider-2.jpg')")
+          .swiper-slide(style="background-image: url('images/slider-3.jpg')")
+        .swiper-pagination
 
-      .map
-        .map-left(style="background-image: url('images/location.png')")
-          // подразумевается вставка блока с кодом карты вместо img
-        .map-right
-          h3.h3 КУ Ханты-Мансийского автономного округа-Югры «Управление Капитального Строительства»
-          p Ханты-Мансийский Автономный округ - Югра АО, Ханты-Мансийск г, ул. Мира, д. 18
-          .phones
-            .phones__item Телефон:
-              span (3467) <b>33-36-33</b>
-            .phones__item Факс:
-              span (3467) <b>33-36-20</b>
-            .phones__item E-mail:
-              span
-                a(href="#").link priem@ukshmao.ru
+    +active(false)
+
+    .slider-mini.swiper-container.js-bottom-slider
+      .swiper-wrapper
+        a(href="#", style="background-image: url('images/teaser-1.png')").swiper-slide
+        a(href="#", style="background-image: url('images/teaser-2.png')").swiper-slide
+        a(href="#", style="background-image: url('images/teaser-3.png')").swiper-slide
+        a(href="#", style="background-image: url('images/teaser-4.png')").swiper-slide
+
+    .map
+      .map-left(style="background-image: url('images/location.png')")
+        // подразумевается вставка блока с кодом карты вместо img
+      .map-right
+        h3.h3 КУ Ханты-Мансийского автономного округа-Югры «Управление Капитального Строительства»
+        p Ханты-Мансийский Автономный округ - Югра АО, Ханты-Мансийск г, ул. Мира, д. 18
+        .phones
+          .phones__item Телефон:
+            span (3467) <b>33-36-33</b>
+          .phones__item Факс:
+            span (3467) <b>33-36-20</b>
+          .phones__item E-mail:
+            span
+              a(href="#").link priem@ukshmao.ru

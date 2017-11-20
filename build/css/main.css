@@ -465,6 +465,7 @@ html,
 body,
 .page {
   width: 100%;
+  height: 100%;
 }
 .index-menu {
   margin: 2rem 4rem;
@@ -493,6 +494,17 @@ a {
 }
 .page {
   overflow-x: hidden;
+  overflow-y: auto;
+}
+.page > .wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .wrapper {
   width: 1400px;
@@ -1269,6 +1281,7 @@ a {
   color: #959da6;
   text-align: center;
   margin-bottom: 2.5rem;
+  margin-top: auto;
 }
 .mapping {
   position: relative;
@@ -1411,4 +1424,210 @@ a {
     left: 1rem;
     top: calc(50% - 10px);
   }
+}
+.table {
+  width: 100%;
+}
+.table tr:hover td {
+  background-color: #edf1f5;
+}
+.table th,
+.table td {
+  padding: .5rem 1rem;
+}
+.table th {
+  background-color: #114a73;
+  color: #fff;
+  padding: .5rem;
+  text-transform: uppercase;
+  font-family: 'Cuprum', 'PT Sans', sans-serif;
+}
+.table td {
+  transition: background-color 0.3s;
+}
+.table td.big {
+  background-color: #edf1f5;
+  text-align: center;
+}
+.table td > a {
+  position: relative;
+}
+.table td > a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.table td > a:hover:after {
+  opacity: 1;
+}
+.table.with-border {
+  border-collapse: collapse;
+}
+.table.with-border td,
+.table.with-border th {
+  border: 1px solid #114a73;
+}
+@media (max-width: 1024px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+.line {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 150px);
+  height: 20px;
+  background-color: #edf1f5;
+}
+.line > span {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+.title {
+  display: inline-block;
+  vertical-align: top;
+  color: #999;
+  font-size: 14px;
+}
+.title > span {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.first {
+  margin-bottom: .5rem;
+}
+.first .line > span {
+  background: #176399 linear-gradient(to top, #176399, #1894d3);
+}
+.second .line > span {
+  background: #00994a linear-gradient(to top, #00994a, #00bf50);
+}
+.legend {
+  text-align: right;
+}
+.legend__item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  color: #999;
+  margin-bottom: 1rem;
+  padding-left: 22px;
+}
+.legend__item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+}
+.legend__item.first:before {
+  background: #176399 linear-gradient(to top, #176399, #1894d3);
+}
+.legend__item.second {
+  margin-left: 1rem;
+}
+.legend__item.second:before {
+  background: #00994a linear-gradient(to top, #00994a, #00bf50);
+}
+@media (max-width: 768px) {
+  .legend__item.second {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .legend__item {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .legend {
+    text-align: left;
+  }
+}
+@media (max-width: 1024px) {
+  .mobile-none {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .detail {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .detail {
+    margin-top: 2rem;
+  }
+}
+.active {
+  display: none;
+  margin-bottom: 1.5rem;
+}
+.active-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.active-line:first-child {
+  margin-bottom: .5rem;
+}
+.active-line > div {
+  width: 50%;
+}
+.active-line > div:first-child {
+  padding-right: 1rem;
+}
+.active__object {
+  color: #8c8c8c;
+}
+@media (max-width: 768px) {
+  .active {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+.phone {
+  color: #8c8c8c;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+.phone > span {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin: 0 5px;
+}
+.center {
+  text-align: center;
+}
+.center > .h3 {
+  margin-bottom: 1rem;
+}
+.right {
+  text-align: right;
+  color: #8c8c8c;
+  margin-bottom: .5rem;
 }

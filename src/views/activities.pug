@@ -1,0 +1,138 @@
+extends layout
+
+block content
+
+  -
+    var territories = [
+      {
+        name: 'Ханты-Мансийскй автономный округ - ЮГРА',
+        objects: 1,
+        end: '',
+        plans: {
+          second: {
+            percent: 11.1,
+            title: '97 272,99'
+          }
+        }
+      },
+      {
+        name: 'Белоярский район',
+        objects: 3,
+        end: 'а',
+        plans: {
+          first: {
+            percent: 7.2,
+            title: '77 417,80'
+          },
+          second: {
+            percent: 8.8,
+            title: '97 272,99'
+          }
+        }
+      },
+      {
+        name: 'Березовский район',
+        objects: 2,
+        end: 'а',
+        plans: {
+          second: {
+            percent: 25.6,
+            title: '223 918,01'
+          }
+        }
+      },
+      {
+        name: 'Кондинский район',
+        objects: 1,
+        end: '',
+        plans: {
+          first: {
+            percent: 0.7,
+            title: '5 900'
+          }
+        }
+      },
+      {
+        name: 'Нижневартовск',
+        objects: 4,
+        end: 'а',
+        plans: {
+          first: {
+            percent: 0.8,
+            title: '6 310,90'
+          },
+          second: {
+            percent: 99.9,
+            title: '874 252,18'
+          }
+        }
+      },
+      {
+        name: 'Березово',
+        objects: 0,
+        end: 'ов'
+      },
+      {
+        name: 'Ханты-Мансийский район',
+        objects: 4,
+        end: 'а',
+        plans: {
+          first: {
+            percent: 0.8,
+            title: '7 450'
+          },
+          second: {
+            percent: 2.6,
+            title: '22 876,90'
+          }
+        }
+      }
+    ]
+
+  .detail
+
+    +active(true)
+
+    section.legend
+      .legend__item.first Адресная инвестиционная программа ХМАО-Югры (АИП)
+      .legend__item.second Программа Сотрудничество
+
+    table.table.desktop
+      tbody
+        tr
+          th Территория
+          th Объекты
+          th Планы финансирования по инвестпрограммам
+        each territory in territories
+          tr
+            td
+              a(href="#")= territory.name
+            td.big= territory.objects
+            td
+              if (typeof territory.plans !== 'undefined')
+                if (typeof territory.plans.first !== 'undefined')
+                  .first
+                    +line(territory.plans.first.percent)
+                    +title(territory.plans.first.title)
+                if (typeof territory.plans.second !== 'undefined')
+                  .second
+                    +line(territory.plans.second.percent)
+                    +title(territory.plans.second.title)
+
+    .mobile
+      each territory in territories
+        .active
+          .active-line
+            .active__name= territory.name
+            .active__object= territory.objects + ' объект' + territory.end
+          if (typeof territory.plans !== 'undefined')
+            if (typeof territory.plans.first !== 'undefined')
+              .active-line.first
+                +title(territory.plans.first.title)
+                +line(territory.plans.first.percent)
+            if (typeof territory.plans.second !== 'undefined')
+              .active-line.second
+                +title(territory.plans.second.title)
+                +line(territory.plans.second.percent)
+
+

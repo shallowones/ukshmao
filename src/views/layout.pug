@@ -25,11 +25,18 @@ html(lang="ru")
 
   body
     include mixins/map
+    include mixins/active
+    include mixins/line
+    include mixins/title
+    include mixins/phone
+    include mixins/handbook
 
-    .page.wrapper
-      include includes/header
-      block content
-      include includes/footer
+    .page
+      .wrapper
+        include includes/header
+        main.main
+          block content
+        include includes/footer
 
-      each path in js
-        script(src= path)
+        each path in js
+          script(src= path)

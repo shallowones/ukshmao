@@ -1,0 +1,24 @@
+mixin active(mobileNone)
+  .main-map
+    .main-map-left
+      h1.h1 Деятельность
+      .main-info
+        .main-info__title Ханты-Мансийский Автономный округ - Югра
+        .main-info-block
+          b Общее количество объектов:
+          p 41
+        .main-info-block
+          b План финансирования по программам на 2017 год:
+          p АИП: 529 239,20 тыс. р.
+          p Сотрудничество: 1 317 151,54 тыс. р.
+        .main-info-block
+          b Общий план финансирования:
+          p 1 846 390,74 тыс. р.
+        a(href="#").button Перейти к списку объектов
+
+    if (mobileNone)
+      .main-map-right.mobile-none
+        +map
+    else
+      .main-map-right
+        +map
