@@ -57,10 +57,18 @@
 
     // мобильное меню
     {
-      $('.js-mobile').on('click', (e) => {
+      const $mobileButton = $('.js-mobile')
+      $mobileButton.on('click', (e) => {
         const $this = $(e.currentTarget)
         $this.toggleClass('active')
         $(e.currentTarget.dataset.target).slideToggle()
+      })
+
+      $(window).resize((e) => {
+        if (e.currentTarget.innerWidth > 1024) {
+          $('.header-bottom').removeAttr('style')
+          $mobileButton.removeClass('active')
+        }
       })
     }
 

@@ -10,6 +10,7 @@ html {
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
   color: #333;
+  overflow: hidden;
 
   @media @mobile {
     font-size: 14px;
@@ -19,6 +20,7 @@ html {
 body {
   background-color: #fff;
   line-height: 1.25rem;
+  overflow: hidden;
 }
 
 html, body, .page {
@@ -55,16 +57,31 @@ html, body, .page {
 a {
   text-decoration: none;
   color: inherit;
+
+  &:focus, &:active {
+    text-decoration: none;
+  }
 }
 
 .page {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   & > .wrapper {
+    min-height: 100vh;
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @media @mobile {
+      display: block;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  @media @desktop-mini {
+    overflow: hidden;
+    -webkit-overflow-scrolling: initial;
   }
 }
 
@@ -74,6 +91,8 @@ a {
 
   @media @desktop-mini {
     width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -274,7 +293,10 @@ a {
     }
 
     &:focus, &:active {
-      text-decoration: underline;
+
+      @media @plan {
+        text-decoration: underline;
+      }
     }
 
     @media @plan {
@@ -440,6 +462,10 @@ a {
         height: 30px;
         box-shadow: 0 0 56px rgba(0, 0, 0, 0.3);
         z-index: -1;
+
+        @media @plan {
+          display: none;
+        }
       }
     }
 
@@ -579,6 +605,7 @@ a {
 }
 
 .main {
+  flex: 1 0 auto;
   margin-bottom: 2.5rem;
 
   &-map {
@@ -685,6 +712,7 @@ a {
     height: 17.5rem;
     background: no-repeat center;
     background-size: cover;
+    overflow: hidden;
 
     & > img {
       max-width: 100%;
@@ -785,8 +813,11 @@ a {
   font-size: .875rem;
   color: #959da6;
   text-align: center;
-  margin-bottom: 2.5rem;
-  margin-top: auto;
+  padding-bottom: 2.5rem;
+
+  @media @mobile {
+    padding-bottom: 0;
+  }
 }
 
 .mapping {
@@ -909,6 +940,8 @@ a {
     }
 
     &.active {
+      display: inline-block;
+      margin-bottom: 0;
 
       & span {
 
@@ -1010,7 +1043,6 @@ a {
   }
 
   @media @plan {
-    display: block;
     overflow-x: auto;
   }
 }
@@ -1111,6 +1143,21 @@ a {
 }
 
 .detail {
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  & a {
+    color: #114a73;
+    font-weight: bold;
+    transition: color .3s;
+
+    &:hover {
+      color: #176399;
+    }
+  }
 
   @media @desktop-mini {
     padding: 0 1rem;
