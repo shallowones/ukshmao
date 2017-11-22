@@ -1605,10 +1605,12 @@ a:active {
 .detail a {
   color: #114a73;
   font-weight: bold;
+  text-decoration: underline;
   transition: color .3s;
 }
 .detail a:hover {
   color: #176399;
+  text-decoration: none;
 }
 @media (max-width: 1400px) {
   .detail {
